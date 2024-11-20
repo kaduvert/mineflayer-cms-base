@@ -1,0 +1,30 @@
+{
+  "name": "mineflayer-cms-base",
+  "version": "0.1.0",
+  "description": "mineflayer common modified server base",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaduvert/mineflayer-cms-base.git"
+  },
+  "keywords": [
+    "mineflayer",
+    "custom",
+    "modified",
+    "server"
+  ],
+  "author": "kaduvert",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kaduvert/mineflayer-cms-base/issues"
+  },
+  "homepage": "https://github.com/kaduvert/mineflayer-cms-base#readme",
+  "dependencies": {
+    "mineflayer-extra-patterns": "^0.1.2",
+    "debug": "^4.3.7",
+    "prismarine-item": "^1.15.0"
+  }
+}
