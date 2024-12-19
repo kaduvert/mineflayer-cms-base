@@ -1,6 +1,6 @@
 {
   "name": "mineflayer-cms-base",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "mineflayer common modified server base",
   "main": "src/index.js",
   "scripts": {

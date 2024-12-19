@@ -1,5 +1,9 @@
-module.exports = function load(bot, ns) {
+module.exports = (aliases) => (function load(bot, ns) {
+    const applyGlobalChatAliases = require('./aliases')(aliases)
+
     function loadData(dataKey, data) {
+        applyGlobalChatAliases(data, ns.regexAliases)
+
         bot.loadChatPatterns(data.chatPatterns, dataKey)
         bot.window.loadPatterns(data, dataKey)
 
@@ -123,4 +127,4 @@ module.exports = function load(bot, ns) {
             }
         })
     })
-}
+})

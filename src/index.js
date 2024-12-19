@@ -1,11 +1,10 @@
 const plugins = [
     require('mineflayer-extra-patterns'),
     require('./patternShortcuts'),
-    require('./window'),
-    require('./data')
+    require('./window')
 ]
 
-module.exports = (namespace, modules) => {
+module.exports = (namespace, regexAliases, modules) => {
     return function inject(bot, options) {
         const ns = bot[namespace] = {}
 
@@ -116,6 +115,7 @@ module.exports = (namespace, modules) => {
         plugins.forEach(plugin => {
             plugin(bot, ns)
         })
+        require('./data')(regexAliases)(bot, ns)
 
         modules.forEach(module => {
             module.load?.(bot, ns)
